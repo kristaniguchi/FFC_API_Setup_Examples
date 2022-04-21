@@ -1,13 +1,15 @@
 ## 02 Setup FFC API Package
 ## CEFF Workshop - SRF Meeting 4/20/22
+##https://github.com/ceff-tech/ffc_api_client 
+
 
 ###########################################
-### Set up
+### Setup
 
 #load library
 library(ffcAPIClient)
 
-# set token from eflows website 
+# set token from eflows website, paste your token below 
 ffctoken <-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLcmlzIiwibGFzdE5hbWUiOiJUYW5pZ3VjaGkgUXVhbiIsImVtYWlsIjoia3Jpc3RpbmV0cUBzY2N3cnAub3JnIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2MTMwNjkxMDJ9.pOy0lTuKBm75Us_PtD8G2yD_l9ISZea2atsPwWUCsDw'
 
 ###########################################
