@@ -6,4 +6,4 @@ Salmonid Restoration Federation Meeting 2022
 
 
 FFC API Documentation: https://ceff-tech.github.io/ffc_api_client/articles/getting_started.html
-Setup and example usage
+FFC Github Repository: https://github.com/ceff-tech/ffc_api_client
