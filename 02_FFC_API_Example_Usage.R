@@ -27,7 +27,7 @@ ffctoken <-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLcmlzIiwibGF
 SFA_observed <- ffcAPIClient::evaluate_gage_alteration(gage_id = 11445500, 
                                          token = ffctoken, 
                                          comid = 14982092,
-                                         plot_output_folder = "./data/Output_02/")
+                                         plot_output_folder = "./ffc_outputs/")
 
 #create data frames to view the output 
 SFA_pred_percentiles <- SFA_observed$predicted_percentiles
