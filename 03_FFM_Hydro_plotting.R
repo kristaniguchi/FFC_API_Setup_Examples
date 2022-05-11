@@ -64,9 +64,6 @@ hydro_fig <- plot_ly(data = flow_tim, x = ~date, y = ~flow, type = 'scatter', mo
   layout(title = "COMID 14996611",
          xaxis = list(title = "Date"),
          yaxis = list(title = "Streamflow (CFS)"))
-  layout(title = "Example")
-         xaxis = list(title = "Date"),
-         yaxis = list (title = "Streamflow (CFS)"))
 
 hydro_fig
 
