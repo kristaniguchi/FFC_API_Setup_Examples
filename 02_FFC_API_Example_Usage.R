@@ -10,7 +10,7 @@
 library(ffcAPIClient)
 
 # set token from eflows website, paste your token below 
-ffctoken <-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLcmlzIiwibGFzdE5hbWUiOiJUYW5pZ3VjaGkgUXVhbiIsImVtYWlsIjoia3Jpc3RpbmV0cUBzY2N3cnAub3JnIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2MTMwNjkxMDJ9.pOy0lTuKBm75Us_PtD8G2yD_l9ISZea2atsPwWUCsDw'
+ffctoken <-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLcmlzIiwibGFzdE5hbWUiOiJUYW5pZ3VjaGkgUXVhbiIsImVtYWlsIjoia3Jpc3RpbmV0cUBzY2N3cnAub3JnIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2NjU0Mjk1MTF9._kVu5N2YzYjqKQribY3nwU14Z3cCOZcFq6q9p6sgn_8'
 
 ###########################################
 #Calculate observed FFM, 
@@ -27,23 +27,22 @@ ffctoken <-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLcmlzIiwibGF
 SFA_observed <- ffcAPIClient::evaluate_gage_alteration(gage_id = 11445500, 
                                          token = ffctoken, 
                                          comid = 14982092,
-                                         plot_output_folder = "./ffc_outputs/")
+                                         plot_output_folder = "./data/Output_02//")
 
 #create data frames to view the output 
 SFA_pred_percentiles <- SFA_observed$predicted_percentiles
-SFA_pred_WYT_percentiles <- SFA_observed$predicted_wyt_percentiles
 SFA_obs_percentiles <- SFA_observed$ffc_percentiles
 SFA_ffc_results <- SFA_observed$ffc_results
-
 SFA_doh_data <- SFA_observed$doh_data
 SFA_alteration <- SFA_observed$alteration
 
 #save dataframes as a csv
 write.csv(SFA_alteration, file="./data/Output_02/SFA_alteration.csv", row.names = FALSE)
+write.csv(SFA_ffc_results, file="./data/Output_02/SFA_annualFFM_results.csv", row.names = FALSE)
 
 
 ###########################################
-### Option 2. FFC with your own flow data
+### Option 2. FFC with your own flow data (modeled or from gage)
 
 #What you need: COMID (14996611) and flow timeseries
 
@@ -64,7 +63,6 @@ Sample_observed <- ffcAPIClient::evaluate_alteration(timeseries_df = flow.data,
 
 #create data frames to view the output
 Sample_pred_percentiles <- Sample_observed$predicted_percentiles
-Sample_pred_WYT_percentiles <- Sample_observed$predicted_wyt_percentiles
 Sample_obs_percentiles <- Sample_observed$ffc_percentiles
 Sample_ffc_results <- Sample_observed$ffc_results
 Sample_doh_data <- Sample_observed$doh_data
@@ -73,6 +71,7 @@ Sample_alteration <- Sample_observed$alteration
 
 #save as a csv
 write.csv(Sample_alteration, file="./data/Output_02/Sample/Sample_alteration.csv", row.names = FALSE)
+write.csv(Sample_ffc_results, file="./data/Output_02/Sample/Sample_annualFFM_results.csv", row.names = FALSE)
 
 
 
