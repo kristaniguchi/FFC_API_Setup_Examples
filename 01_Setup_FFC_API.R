@@ -1,5 +1,5 @@
 ## 01 Setup FFC API Package
-## CEFF Workshop - SRF Meeting 4/20/22
+## CEFF Workshop - CABW/Cal-SFS Meeting 2022
 ##https://github.com/ceff-tech/ffc_api_client 
 
 
